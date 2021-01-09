@@ -1,6 +1,0 @@
-/home/sol/git_ws/TurretSystem/CMakeFiles/rebuild_cache.dir
-/home/sol/git_ws/TurretSystem/CMakeFiles/edit_cache.dir
-/home/sol/git_ws/TurretSystem/CMakeFiles/TurretSystemSubClasses.dir
-/home/sol/git_ws/TurretSystem/CMakeFiles/turretSystem.dir
-/home/sol/git_ws/TurretSystem/CMakeFiles/dense_optical_flow4.dir
-/home/sol/git_ws/TurretSystem/CMakeFiles/calibrate.dir
