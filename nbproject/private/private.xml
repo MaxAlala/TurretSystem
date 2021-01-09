@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/sol/git_ws/TurretSystem/src/motionDetector.cpp</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/main.cpp</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/TurretSystem.h</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/Eye.h</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/StepperMotorController.cpp</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/Serial_Rs232.cpp</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/PixelToMotorStepsConverter.cpp</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/Eye.cpp</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/motionDetector.h</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/StepperMotorController.h</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/Serial_Rs232.h</file>
+            <file>file:/home/sol/git_ws/TurretSystem/CMakeLists.txt</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/PixelToMotorStepsConverter.h</file>
+            <file>file:/home/sol/git_ws/TurretSystem/src/TurretSystem.cpp</file>
+        </group>
+    </open-files>
+</project-private>

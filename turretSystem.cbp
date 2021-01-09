@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="turretSystem"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\eigen3\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dense_optical_flow4">
+				<Option output="/home/sol/git_ws/TurretSystem/bin/dense_optical_flow4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sol/git_ws/TurretSystem/./include"/>
+					<Add directory="/home/sol/d2co/libsForD2co/opencv/install/include"/>
+					<Add directory="/usr/include/eigen3"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 dense_optical_flow4"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dense_optical_flow4/fast">
+				<Option output="/home/sol/git_ws/TurretSystem/bin/dense_optical_flow4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sol/git_ws/TurretSystem/./include"/>
+					<Add directory="/home/sol/d2co/libsForD2co/opencv/install/include"/>
+					<Add directory="/usr/include/eigen3"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 dense_optical_flow4/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="turretSystem">
+				<Option output="/home/sol/git_ws/TurretSystem/bin/turretSystem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sol/git_ws/TurretSystem/./include"/>
+					<Add directory="/home/sol/d2co/libsForD2co/opencv/install/include"/>
+					<Add directory="/usr/include/eigen3"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 turretSystem"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="turretSystem/fast">
+				<Option output="/home/sol/git_ws/TurretSystem/bin/turretSystem" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sol/git_ws/TurretSystem"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/sol/git_ws/TurretSystem/./include"/>
+					<Add directory="/home/sol/d2co/libsForD2co/opencv/install/include"/>
+					<Add directory="/usr/include/eigen3"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 turretSystem/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/sol/git_ws/TurretSystem/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/sol/git_ws/TurretSystem/apps/dense_optical_flow4.cpp">
+			<Option target="dense_optical_flow4"/>
+		</Unit>
+		<Unit filename="/home/sol/git_ws/TurretSystem/src/main.cpp">
+			<Option target="turretSystem"/>
+		</Unit>
+		<Unit filename="/home/sol/git_ws/TurretSystem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/sol/git_ws/TurretSystem/../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

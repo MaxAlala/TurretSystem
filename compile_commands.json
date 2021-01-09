@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/motionDetector.cpp.o -c /home/sol/git_ws/TurretSystem/src/motionDetector.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/motionDetector.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/PixelToMotorStepsConverter.cpp.o -c /home/sol/git_ws/TurretSystem/src/PixelToMotorStepsConverter.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/PixelToMotorStepsConverter.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/StepperMotorController.cpp.o -c /home/sol/git_ws/TurretSystem/src/StepperMotorController.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/StepperMotorController.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/TurretSystem.cpp.o -c /home/sol/git_ws/TurretSystem/src/TurretSystem.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/TurretSystem.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/Serial_Rs232.cpp.o -c /home/sol/git_ws/TurretSystem/src/Serial_Rs232.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/Serial_Rs232.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/Eye.cpp.o -c /home/sol/git_ws/TurretSystem/src/Eye.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/Eye.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/InverseForwardKinematicsModel.cpp.o -c /home/sol/git_ws/TurretSystem/src/InverseForwardKinematicsModel.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/InverseForwardKinematicsModel.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/turretSystem.dir/src/main.cpp.o -c /home/sol/git_ws/TurretSystem/src/main.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/main.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/dense_optical_flow4.dir/apps/dense_optical_flow4.cpp.o -c /home/sol/git_ws/TurretSystem/apps/dense_optical_flow4.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/dense_optical_flow4.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/calibrate.dir/src/calib_intrinsic.cpp.o -c /home/sol/git_ws/TurretSystem/src/calib_intrinsic.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/calib_intrinsic.cpp"
+}
+]

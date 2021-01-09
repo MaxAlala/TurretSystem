@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "lib/libMOTION_DETECTOR.a"
+)

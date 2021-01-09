@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libTurretSystemSubClasses.a  CMakeFiles/TurretSystemSubClasses.dir/src/motionDetector.cpp.o CMakeFiles/TurretSystemSubClasses.dir/src/PixelToMotorStepsConverter.cpp.o CMakeFiles/TurretSystemSubClasses.dir/src/StepperMotorController.cpp.o CMakeFiles/TurretSystemSubClasses.dir/src/TurretSystem.cpp.o CMakeFiles/TurretSystemSubClasses.dir/src/Serial_Rs232.cpp.o CMakeFiles/TurretSystemSubClasses.dir/src/Eye.cpp.o CMakeFiles/TurretSystemSubClasses.dir/src/InverseForwardKinematicsModel.cpp.o
+/usr/bin/ranlib lib/libTurretSystemSubClasses.a

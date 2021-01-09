@@ -1,0 +1,178 @@
+// Define stepper motor connections and steps per revolution:
+#define dirPin1 22
+#define stepPin1 23
+#define dirPin2 24
+#define stepPin2 25
+#define stepsPerRevolution 800
+struct command
+{
+  long angle = 0;
+  int rotation_speed = 0;
+  int axis = 0;
+};
+bool wasMessageReceived = false;
+command coms[5];
+
+void setup() {
+  // Declare pins as output:
+  pinMode(stepPin1, OUTPUT);
+  pinMode(dirPin1, OUTPUT);
+  pinMode(stepPin2, OUTPUT);
+  pinMode(dirPin2, OUTPUT);
+  Serial.begin(115200); //define baud rate
+  Serial.println("Testing Accelstepper"); //print a message
+}
+
+void run1And2Axes(int stepsFor1, int stepsFor2)
+{
+  // 1 axis == 8000 steps/rotation
+  // 2 axis == 4400 s/r
+  // 1sec= 1000 000 microsec
+  // high == clockwise
+  Serial.println(String(stepsFor1) + " " + String(stepsFor2));
+
+  // Set the spinning direction clockwise:
+  if(stepsFor1 < 0)
+  {
+  digitalWrite(dirPin1, HIGH);
+  stepsFor1 = -stepsFor1;
+
+  }
+  else
+  digitalWrite(dirPin1, LOW);
+  
+  int delay_ms = 500;
+  // Spin the stepper motor 1 revolution slowly:
+  for (int i = 0; i < stepsFor1; i++) {
+    // These four lines result in 1 step:
+    digitalWrite(stepPin1, HIGH);
+    delayMicroseconds(delay_ms);
+    digitalWrite(stepPin1, LOW);
+    delayMicroseconds(delay_ms );
+  }
+  delay(1000);
+//  digitalWrite(dirPin1, LOW);
+//  // Spin the stepper motor 1 revolution slowly:
+//  for (int i = 0; i < stepsFor1; i++) {
+//    // These four lines result in 1 step:
+//    digitalWrite(stepPin1, HIGH);
+//    delayMicroseconds(delay_ms);
+//    digitalWrite(stepPin1, LOW);
+//    delayMicroseconds(delay_ms);
+//  }
+
+
+  
+  // 2 axis
+
+  if(stepsFor2 < 0)
+  {
+  digitalWrite(dirPin2, LOW);
+  stepsFor2 = -stepsFor2;
+
+  }
+  else
+  digitalWrite(dirPin2, HIGH);
+  
+  // Spin the stepper motor 1 revolution slowly:
+  for (int i = 0; i < stepsFor2; i++) {
+    // These four lines result in 1 step:
+    digitalWrite(stepPin2, HIGH);
+    delayMicroseconds(delay_ms);
+    digitalWrite(stepPin2, LOW);
+    delayMicroseconds(delay_ms );
+  }
+//  delay(1000);
+//  digitalWrite(dirPin2, LOW);
+//  // Spin the stepper motor 1 revolution slowly:
+//  for (int i = 0; i < stepsFor2; i++) {
+//    // These four lines result in 1 step:
+//    digitalWrite(stepPin2, HIGH);
+//    delayMicroseconds(delay_ms);
+//    digitalWrite(stepPin2, LOW);
+//    delayMicroseconds(delay_ms);
+//  }
+
+  for(int i = 0; i < 5; i++)
+  {
+    coms[i].angle = 0;
+  }
+
+}
+void loop() {
+
+  
+checkSerial();
+if (wasMessageReceived )
+{
+run1And2Axes(coms[0].angle,coms[1].angle);
+wasMessageReceived = false;
+}
+}
+
+
+void getIndexArray(int* separatorIndex , String data, char separator, int &found)
+{
+  for (int i = 0; i < data.length(); i++) {
+    if (data.charAt(i) == separator) {
+      separatorIndex[found] = i;
+      //Serial.print(String(separatorIndex[found]) + " ");
+      found++;
+    }
+  }
+  if (found % 2 != 0) Serial.println("BAD INPUT!"); //print a message
+}
+
+
+//s 200 233 0 0 0 0 0 0 444 456
+void parseValue(String data, char separator, command * com)
+{
+  int found = 0;
+  int * separatorIndex = new int[5 * 2];
+  getIndexArray(separatorIndex, data, separator, found);
+  int counter = 0;
+  for (int i = 0; i < found; i++)
+  {
+
+    if (i == found - 1) {
+      com[counter].rotation_speed = data.substring(separatorIndex[i], data.length()).toInt();
+    }
+    else {
+      if (i % 2 == 0) {
+        com[counter].angle = data.substring(separatorIndex[i], separatorIndex[i + 1]).toInt();
+        Serial.println(String(com[counter].angle) + "val of angle, counter = " + String(counter));
+      }
+      else com[counter].rotation_speed = data.substring(separatorIndex[i], separatorIndex[i + 1]).toInt();
+    }
+    if (i % 2 != 0) counter++;
+  }
+}
+void printReceivedCommands(command *coms)
+{
+  for (int i = 0; i < 5; i++)
+  {
+    Serial.print(String(coms[i].angle) + " " + String(coms[i].rotation_speed) + " ");
+
+  }
+  Serial.println();
+}
+
+void checkSerial() //method for receiving the commands
+{
+  String receivedCommand;
+  if (Serial.available() > 0)
+  {
+    wasMessageReceived = true;
+    receivedCommand = Serial.readStringUntil('\n');
+    Serial.print("RECEIVED MESSAGE: " + receivedCommand);
+            if (receivedCommand.startsWith("r")) //this is the measure part
+        {
+
+          
+          parseValue(receivedCommand, ' ', coms);
+          printReceivedCommands(coms);
+        }
+
+        
+  }
+}
