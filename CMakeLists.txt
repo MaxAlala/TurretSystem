@@ -83,14 +83,18 @@ endif(NOT DEFINED EIGEN3_INCLUDE_DIR)
 
 ###add TurretSystem
 set(
-TurretSystemSubClasses src/motionDetector.cpp 
+TurretSystemSubClasses 
+src/MovementDetector.cpp
+src/motionDetector.cpp 
 src/PixelToMotorStepsConverter.cpp
 src/StepperMotorController.cpp
 src/TurretSystem.cpp
 src/Serial_Rs232.cpp
 src/Eye.cpp
 src/InverseForwardKinematicsModel.cpp
+
 )
+
 add_library(TurretSystemSubClasses STATIC ${TurretSystemSubClasses})
 
 target_link_libraries( TurretSystemSubClasses PUBLIC
@@ -148,15 +152,71 @@ target_link_libraries( turretSystem
            ${CMAKE_THREAD_LIBS_INIT}
            TurretSystemSubClasses
 )
+#
+#add_executable(dense_optical_flow4 apps/dense_optical_flow4.cpp)
+#set_target_properties( dense_optical_flow4 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+#set_target_properties( dense_optical_flow4 PROPERTIES LINKER_LANGUAGE CXX)
+#target_link_libraries( dense_optical_flow4
+#           ${OpenCV_LIBS}
+#	   ${SERIAL_LDFLAGS} 
+#	   ${CMAKE_THREAD_LIBS_INIT}
+#)
 
-add_executable(dense_optical_flow4 apps/dense_optical_flow4.cpp)
-set_target_properties( dense_optical_flow4 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
-set_target_properties( dense_optical_flow4 PROPERTIES LINKER_LANGUAGE CXX)
-target_link_libraries( dense_optical_flow4
+add_executable(script1 apps/script1.cpp)
+set_target_properties( script1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( script1 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( script1
            ${OpenCV_LIBS}
 	   ${SERIAL_LDFLAGS} 
 	   ${CMAKE_THREAD_LIBS_INIT}
 )
+
+add_executable(script2 apps/script2.cpp)
+set_target_properties( script2 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( script2 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( script2
+           ${OpenCV_LIBS}
+	   ${SERIAL_LDFLAGS} 
+	   ${CMAKE_THREAD_LIBS_INIT}
+)
+
+
+add_executable(script3 apps/script3.cpp)
+set_target_properties( script3 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( script3 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( script3
+           ${OpenCV_LIBS}
+	   ${SERIAL_LDFLAGS} 
+	   ${CMAKE_THREAD_LIBS_INIT}
+)
+
+add_executable(script4 apps/script4.cpp)
+set_target_properties( script4 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( script4 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( script4
+           ${OpenCV_LIBS}
+	   ${SERIAL_LDFLAGS} 
+	   ${CMAKE_THREAD_LIBS_INIT}
+)
+
+add_executable(script5 apps/script5.cpp)
+set_target_properties( script5 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( script5 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( script5
+           ${OpenCV_LIBS}
+	   ${SERIAL_LDFLAGS} 
+	   ${CMAKE_THREAD_LIBS_INIT}
+)
+
+add_executable(script6 apps/script6.cpp)
+set_target_properties( script6 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( script6 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( script6
+           ${OpenCV_LIBS}
+	   ${SERIAL_LDFLAGS} 
+	   ${CMAKE_THREAD_LIBS_INIT}
+)
+
 
 add_executable(calibrate src/calib_intrinsic.cpp src/popt_pp.h)
 set_target_properties(calibrate PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)

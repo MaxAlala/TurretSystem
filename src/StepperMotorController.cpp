@@ -35,10 +35,13 @@ StepperMotorController::~StepperMotorController() {
 
 void StepperMotorController::moveAFewSteps(int steps1, int steps2) {
     
-    
-    std::string message = "r " + std::to_string(steps1) + " " + std::to_string(speed1) + " " + std::to_string(steps2) + " " + std::to_string(speed2) + "\n";
+//                std::cout << "send 
+//    std::string message = "r " + std::to_string(steps1) + " " + std::to_string(speed1) + " " + std::to_string(steps2) + " " + std::to_string(speed2) + "\n";
 //    std::cout << "sending this message: "<< message << "\n";
+    std::string message = "R " + std::to_string(steps1) + " " +std::to_string(steps2) + "\n";
+    std::cout << "sending this message: "<< message << "\n";
     serial->write(message);
+    
 }
 
 void StepperMotorController::readLog() {

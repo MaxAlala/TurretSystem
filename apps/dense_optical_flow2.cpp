@@ -5,13 +5,11 @@
 
 
 #include "opencv2/imgproc.hpp"
-
-
 #include "opencv2/objdetect/objdetect.hpp"
-
-
 #include "opencv2/video/tracking.hpp"
-
+#include <opencv2/opencv.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/highgui.hpp>
 
 #include <vector>
 
@@ -363,7 +361,7 @@ void findMotion(VideoCapture& cap, Point& detectedObject) {
                     setDefaultGroupCellMatrix();
                     // make prevgray empty to get else section
                     prevgray = UMat();
-                    framesToSkip = 5; 
+                    framesToSkip = 10; 
                 } else {
                     //////////display image
 

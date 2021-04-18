@@ -32,6 +32,7 @@ Mat img, gray;
 Size im_size;
 Mat K;
 Mat D;
+int skipFrame = 0;
 
 double computeReprojectionErrors(const vector< vector< Point3f > >& objectPoints,
         const vector< vector< Point2f > >& imagePoints,
@@ -131,13 +132,15 @@ void calibrateCamera() {
 
 }
 
-Eye::Eye(int camera_id, bool shouldFlipFrame_) :
+Eye::Eye(int camera_id, bool shouldFlipFrame_, bool hasMovementDetection_) :
 wasPointChosen{false},
 selectionWindow{"select a point"},
 selectedPointWindow{"selected point"},
-shouldFlipFrame{shouldFlipFrame_}
+shouldFlipFrame{shouldFlipFrame_},
+hasMovementDetection{hasMovementDetection_}
 {
-//            cap.open("rtsp://192.168.1.111//user=admin&password=&channel=1&stream=1.sdp?real_stream--rtp-caching=0");
+    movementDetector.reset(new MovementDetector());
+    //            cap.open("rtsp://192.168.1.111//user=admin&password=&channel=1&stream=1.sdp?real_stream--rtp-caching=0");
     //    calibrateCamera();
 
     // read calibration data if already calibrated
@@ -212,50 +215,66 @@ cv::Point Eye::run() {
     ///////////////////// END FOR DISTORTION FIX
     cv::circle(frame, cv::Point(320, 240), 10, (51, 102, 255), 2);
     if (shouldFlipFrame)cv::flip(frame, frame, 1);
-
-    cv::line(frame,
-            cv::Point(frame.cols / 4, 0),
-            cv::Point(frame.cols / 4, 480),
-            cv::Scalar(0, 0, 0),
-            3);
-
-    cv::line(frame,
-            cv::Point(frame.cols / 4 * 2, 0),
-            cv::Point(frame.cols / 4 * 2, 480),
-            cv::Scalar(0, 0, 0),
-            3);
-
-    cv::line(frame,
-            cv::Point(frame.cols / 4 * 3, 0),
-            cv::Point(frame.cols / 4 * 3, 480),
-            cv::Scalar(0, 0, 0),
-            3);
-
-    cv::line(frame,
-            cv::Point(0, frame.rows / 4),
-            cv::Point(640, frame.rows / 4),
-            cv::Scalar(0, 0, 0),
-            3);
-
-    cv::line(frame,
-            cv::Point(0, frame.rows / 4 * 2),
-            cv::Point(640, frame.rows / 4 * 2),
-            cv::Scalar(0, 0, 0),
-            3);
-
-    cv::line(frame,
-            cv::Point(0, frame.rows / 4 * 3),
-            cv::Point(640, frame.rows / 4 * 3),
-            cv::Scalar(0, 0, 0),
-            3);
-
+    //
+    //    cv::line(frame,
+    //            cv::Point(frame.cols / 4, 0),
+    //            cv::Point(frame.cols / 4, 480),
+    //            cv::Scalar(0, 0, 0),
+    //            3);
+    //
+    //    cv::line(frame,
+    //            cv::Point(frame.cols / 4 * 2, 0),
+    //            cv::Point(frame.cols / 4 * 2, 480),
+    //            cv::Scalar(0, 0, 0),
+    //            3);
+    //
+    //    cv::line(frame,
+    //            cv::Point(frame.cols / 4 * 3, 0),
+    //            cv::Point(frame.cols / 4 * 3, 480),
+    //            cv::Scalar(0, 0, 0),
+    //            3);
+    //
+    //    cv::line(frame,
+    //            cv::Point(0, frame.rows / 4),
+    //            cv::Point(640, frame.rows / 4),
+    //            cv::Scalar(0, 0, 0),
+    //            3);
+    //
+    //    cv::line(frame,
+    //            cv::Point(0, frame.rows / 4 * 2),
+    //            cv::Point(640, frame.rows / 4 * 2),
+    //            cv::Scalar(0, 0, 0),
+    //            3);
+    //
+    //    cv::line(frame,
+    //            cv::Point(0, frame.rows / 4 * 3),
+    //            cv::Point(640, frame.rows / 4 * 3),
+    //            cv::Scalar(0, 0, 0),
+    //            3);
 
 
     imshow(selectionWindow, frame);
-    if (::wasPointChosen) {
+    if (hasMovementDetection) {
+
+        if(skipFrame != 0)
+        {
+            --skipFrame;
+            std::cout<< skipFrame << std::endl;
+            return cv::Point(0, 0);
+        }
+        
+        Point pointToReturn(0, 0);
+        movementDetector->findMovement(frame, pointToReturn);
+        if (pointToReturn != Point(0, 0))
+            skipFrame = 15;
+        std::cout << pointToReturn << std::endl;
+        return pointToReturn;
+    } else
+        if (::wasPointChosen) {
         cv::circle(frame, ::chosenPoint, 10, (0, 255, 0), 2);
         imshow(selectedPointWindow, frame);
         ::wasPointChosen = false;
+
         return ::chosenPoint;
     } else return cv::Point(0, 0);
 }

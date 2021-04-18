@@ -41,7 +41,8 @@ int main(int argc, const char** argv) {
     TurretSystem ts;
 //    ts.calibrateItself();
     ts.run();
-    
+//    StepperMotorController smc(400, 400, 4, "/dev/ttyACM0");
+//    smc.moveAFewSteps(0, 200);
     
     
 //    /////////////////////

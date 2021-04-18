@@ -14,11 +14,13 @@
 #include "TurretSystem.h"
 #include "StepperMotorController.h"
 #include <iostream>
+
 TurretSystem::TurretSystem() : currentState{States::MANUAL}
 {
-    eye.reset(new Eye(1, true));
+    eye.reset(new Eye(1, true, false));
     pixelToMotorStepsConverter.reset(new PixelToMotorStepsConverter(640, 480, 561, 22, 12, 2.905, 1.57));
-    stepperMotorController.reset(new StepperMotorController(400, 400, 4, "/dev/ttyUSB0"));
+    stepperMotorController.reset(new StepperMotorController(400, 400, 4, "/dev/ttyACM0"));
+
 
 }
 
@@ -55,7 +57,7 @@ void TurretSystem::run() {
 //                pixelToMotorStepsConverter->calculateStepsByPixel(chosenPoint, stepsForFirstMotor, stepsForSecondMotor);
 //                pixelToMotorStepsConverter->calculateStepsUsingCalibratedValue(chosenPoint, stepsForFirstMotor, stepsForSecondMotor);
                 pixelToMotorStepsConverter->calculateStepsUsingInverseKinematics(chosenPoint, stepsForFirstMotor, stepsForSecondMotor);
-
+                
                 stepperMotorController->moveAFewSteps(stepsForFirstMotor, stepsForSecondMotor);
 
             }

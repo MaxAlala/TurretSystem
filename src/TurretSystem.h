@@ -18,6 +18,7 @@
 #include "StepperMotorController.h"
 #include <memory> // для std::unique_ptr
 #include "Eye.h"
+#include "MovementDetector.h"
 //turn on
 //turn off
 //manual state
@@ -47,6 +48,7 @@ private:
     std::unique_ptr<Eye> eye;
     std::unique_ptr<StepperMotorController> stepperMotorController;
     std::unique_ptr<PixelToMotorStepsConverter> pixelToMotorStepsConverter;
+
 };
 
 #endif /* TURRETSYSTEM_H */

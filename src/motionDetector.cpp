@@ -149,29 +149,6 @@ void MotionDetector::findMotion(VideoCapture& cap, Point& detectedObject, int fr
     //    Point bottomRightAreaPoint;
     int movingObjectWasDetected = 0;
 
-    ///////////////////////////// SERIAL PORT CONNECTION
-    using namespace LibSerial;
-    using LibSerial::SerialPort;
-    using LibSerial::SerialStream;
-    SerialPort serial_port;
-    SerialStream serial_stream;
-    serial_port.Open("/dev/ttyUSB0");
-    //    serial_stream.Open( "/dev/ttyUSB1" ) ;
-
-    // Specify a timeout value (in milliseconds).
-    size_t timeout_milliseconds = 25;
-
-    // Set the baud rates.
-    using LibSerial::BaudRate;
-    serial_port.SetBaudRate(BaudRate::BAUD_115200);
-    //    serial_stream.SetBaudRate( BaudRate::BAUD_115200 ) ;
-
-    int steps = 10;
-    int stepsForMotionSlowing = 50;
-    int speeds [] = {200, 200};
-    int bigSpeed = 1600;
-    ///////////////////////////// END OF SERIAL PORT DECLARATION
-    namedWindow("prew", WINDOW_AUTOSIZE);
     Mat original;
     for (;;) {
         //read == grab(takes frame from camera) + retrieve(decode the taken frame)

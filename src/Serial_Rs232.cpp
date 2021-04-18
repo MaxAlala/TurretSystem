@@ -12,6 +12,7 @@
  */
 
 #include "Serial_Rs232.h"
+#include <iostream>
 Serial_Rs232 * Serial_Rs232::serial_Rs232_instance
 {
     nullptr
@@ -44,7 +45,10 @@ void Serial_Rs232::changePort(const std::string& port) {
 }
 
 void Serial_Rs232::write(const std::string& message) {
+    std::string str;
     serial_port.Write(message);
+    if (serial_port.GetNumberOfBytesAvailable() != 0) serial_port.ReadLine(str);
+    if (str != "") std::cout << str << "\n";
 }
 
 bool Serial_Rs232::read(std::string& message) {

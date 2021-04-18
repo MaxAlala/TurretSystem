@@ -1,6 +1,31 @@
 [
 {
   "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/script3.dir/apps/script3.cpp.o -c /home/sol/git_ws/TurretSystem/apps/script3.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/script3.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/script1.dir/apps/script1.cpp.o -c /home/sol/git_ws/TurretSystem/apps/script1.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/script1.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/calibrate.dir/src/calib_intrinsic.cpp.o -c /home/sol/git_ws/TurretSystem/src/calib_intrinsic.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/calib_intrinsic.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/turretSystem.dir/src/main.cpp.o -c /home/sol/git_ws/TurretSystem/src/main.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/main.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/MovementDetector.cpp.o -c /home/sol/git_ws/TurretSystem/src/MovementDetector.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/src/MovementDetector.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
   "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/TurretSystemSubClasses.dir/src/motionDetector.cpp.o -c /home/sol/git_ws/TurretSystem/src/motionDetector.cpp",
   "file": "/home/sol/git_ws/TurretSystem/src/motionDetector.cpp"
 },
@@ -36,17 +61,22 @@
 },
 {
   "directory": "/home/sol/git_ws/TurretSystem",
-  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/turretSystem.dir/src/main.cpp.o -c /home/sol/git_ws/TurretSystem/src/main.cpp",
-  "file": "/home/sol/git_ws/TurretSystem/src/main.cpp"
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/script4.dir/apps/script4.cpp.o -c /home/sol/git_ws/TurretSystem/apps/script4.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/script4.cpp"
 },
 {
   "directory": "/home/sol/git_ws/TurretSystem",
-  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/dense_optical_flow4.dir/apps/dense_optical_flow4.cpp.o -c /home/sol/git_ws/TurretSystem/apps/dense_optical_flow4.cpp",
-  "file": "/home/sol/git_ws/TurretSystem/apps/dense_optical_flow4.cpp"
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/script5.dir/apps/script5.cpp.o -c /home/sol/git_ws/TurretSystem/apps/script5.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/script5.cpp"
 },
 {
   "directory": "/home/sol/git_ws/TurretSystem",
-  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/calibrate.dir/src/calib_intrinsic.cpp.o -c /home/sol/git_ws/TurretSystem/src/calib_intrinsic.cpp",
-  "file": "/home/sol/git_ws/TurretSystem/src/calib_intrinsic.cpp"
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/script6.dir/apps/script6.cpp.o -c /home/sol/git_ws/TurretSystem/apps/script6.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/script6.cpp"
+},
+{
+  "directory": "/home/sol/git_ws/TurretSystem",
+  "command": "/usr/bin/g++   -I/home/sol/git_ws/TurretSystem/./include -I/home/sol/d2co/libsForD2co/opencv/install/include -I/usr/include/eigen3 -I/include  -g3 -gdwarf-2   -std=gnu++14 -o CMakeFiles/script2.dir/apps/script2.cpp.o -c /home/sol/git_ws/TurretSystem/apps/script2.cpp",
+  "file": "/home/sol/git_ws/TurretSystem/apps/script2.cpp"
 }
 ]
