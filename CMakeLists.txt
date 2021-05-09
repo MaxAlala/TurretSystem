@@ -152,15 +152,15 @@ target_link_libraries( turretSystem
            ${CMAKE_THREAD_LIBS_INIT}
            TurretSystemSubClasses
 )
-#
-#add_executable(dense_optical_flow4 apps/dense_optical_flow4.cpp)
-#set_target_properties( dense_optical_flow4 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
-#set_target_properties( dense_optical_flow4 PROPERTIES LINKER_LANGUAGE CXX)
-#target_link_libraries( dense_optical_flow4
-#           ${OpenCV_LIBS}
-#	   ${SERIAL_LDFLAGS} 
-#	   ${CMAKE_THREAD_LIBS_INIT}
-#)
+
+add_executable(dense_optical_flow4 apps/dense_optical_flow4.cpp)
+set_target_properties( dense_optical_flow4 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties( dense_optical_flow4 PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries( dense_optical_flow4
+           ${OpenCV_LIBS}
+	   ${SERIAL_LDFLAGS} 
+	   ${CMAKE_THREAD_LIBS_INIT}
+)
 
 add_executable(script1 apps/script1.cpp)
 set_target_properties( script1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
